@@ -1,0 +1,71 @@
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+  margin: 0; padding: 0;
+}
+header {
+  background: #eb81d0;
+  color: rgb(126, 231, 235);
+  padding: 20px;
+  text-align: center;
+}
+main {
+  max-width: 600px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+form button {
+  padding: 10px 20px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#clientMsg {
+  font-weight: bold;
+  margin-top: 10px;
+}
+footer {
+  text-align: center;
+  margin: 20px 0;
+}
+body { font-family: Arial; padding: 20px; }
+#rooms { display: grid; grid-template-columns: repeat(5, 1fr); gap:10px; }
+.room { padding:15px; background:#eee; text-align:center; border-radius:5px; }
+.available { background:rgb(124, 227, 124); }
+.occupied { background:#f88; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+}
+
+#roomStatus {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.room {
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.available {
+  background-color: green;
+}
+
+.occupied {
+  background-color: red;
+}

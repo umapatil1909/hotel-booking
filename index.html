@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Hotel Booking System</h1></header>
+  <h1>Live Hotel Room Status</h1>
+  <div id="rooms"></div>
+   
+
+  <main>
+    <section id="booking">
+      <h2>Book a Room</h2>
+      <form id="bookingForm" action="BookRoom" method="post">
+        <input type="text" name="name" id="name" placeholder="Your Name" required />
+        <input type="email" name="email" id="email" placeholder="Your Email" required />
+        <input type="date" name="checkin" id="checkin" required />
+        <input type="date" name="checkout" id="checkout" required />
+        <select name="roomType" id="roomType" required>
+          <option value="">Select room type</option>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+        </select>
+        <button type="submit">Book Now</button>
+      </form>
+      <p id="clientMsg"></p>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 My Hotel</footer>
+  <script src="script.js"></script>
+</body>
+</html>

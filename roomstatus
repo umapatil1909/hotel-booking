@@ -1,0 +1,19 @@
+package com.example.hotel;
+
+import java.util.*;
+import java.util.concurrent.*;
+
+public class RoomStatusStore {
+    private static final Map<Integer, Boolean> status = new ConcurrentHashMap<>();
+    static {
+        for (int i = 1; i <= 10; i++) status.put(i, true); // all rooms available
+        Executors.newScheduledThreadPool(1).scheduleAtFixedRate(() -> {
+            int room = new Random().nextInt(10) + 1;
+            status.computeIfPresent(room, (r, v) -> !v);
+        }, 5, 10, TimeUnit.SECONDS);
+    }
+
+    public static Map<Integer, Boolean> getStatus() {
+        return new HashMap<>(status);
+    }
+}
